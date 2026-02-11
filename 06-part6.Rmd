@@ -126,7 +126,7 @@ q_name <- sample(c(
 
 ## **Exercise 12**
 
-combine your graph from Exercise 9 with the fitted regression line from the model superimposed on top. Rather than using `geom_smooth()` to do this, try using `geom_abline` with the appropriate values for the slope and intercept from the model.
+Combine your graph from Exercise 9 with the fitted regression line from the model superimposed on top. Rather than using `geom_smooth()` to do this, try using `geom_abline` with the appropriate values for the slope and intercept from the model.
 
 `r hide("Hint")`
 
@@ -162,6 +162,23 @@ ggplot(data = mlb11, mapping = aes(x = new_slug, y = runs)) +
 ## **Exercise 13**
 
 **Do all the model assumptions hold?**
+`r hide("Hint")`
+```{r sol13, eval = FALSE, echo = TRUE}
+ggplot(data = ??, aes(x = ??, y = ??)) +
+    geom_point() +
+    geom_hline(yintercept = ??, linetype = ??) +
+    labs(x = ??, y = ??)
+
+ggplot(data = ??, aes(x = ??)) +
+    geom_histogram(color = ??, binwidth = ??) +
+    xlab(??)
+
+ggplot(data = ??, aes(sample = ??)) +
+    stat_qq() +
+    stat_qq_line()
+```
+
+`r unhide()`
 
 ```{r, echo = FALSE}
 q_name <- sample(c(
