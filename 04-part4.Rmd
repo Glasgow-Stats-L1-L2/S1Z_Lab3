@@ -76,7 +76,7 @@ q_name <- sample(c(
 
 ## **Exercise 5**
 
-To the nearest whole number. the Chicago Cubs had 654 runs and 5549 at-bats in the 2011 season. The residual for the Chicago Cubs is (to 2 decimal places) `r fitb(-56)`
+To the nearest whole number. the Chicago Cubs had 654 runs and 5549 at-bats in the 2011 season. The residual for the Chicago Cubs is `r fitb(-56)`
 
 <br>
 

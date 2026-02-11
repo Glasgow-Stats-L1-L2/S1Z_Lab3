@@ -17,11 +17,12 @@ assumptions-of-the-linear-model
 how-to-check-the-assumptions-of-a-linear-model
 exercise-6
 exercise-7
-bringing-it-all-together
+optional-tasks-without-full-code
 exercise-9
 exercise-10
 exercise-11
 exercise-12
 exercise-13
+exercise-14
 group-exercise
 tasks

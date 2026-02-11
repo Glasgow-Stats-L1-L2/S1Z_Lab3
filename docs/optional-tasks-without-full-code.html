@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6 Model Diagnostics | S1Z Lab 3</title>
-  <meta name="description" content="6 Model Diagnostics | S1Z Lab 3" />
+  <title>7 Optional tasks (without full code) | S1Z Lab 3</title>
+  <meta name="description" content="7 Optional tasks (without full code) | S1Z Lab 3" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6 Model Diagnostics | S1Z Lab 3" />
+  <meta property="og:title" content="7 Optional tasks (without full code) | S1Z Lab 3" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6 Model Diagnostics | S1Z Lab 3" />
+  <meta name="twitter:title" content="7 Optional tasks (without full code) | S1Z Lab 3" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="prediction-and-prediction-errors.html"/>
-<link rel="next" href="optional-tasks-without-full-code.html"/>
+<link rel="prev" href="model-diagnostics.html"/>
+<link rel="next" href="group-exercise.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -201,79 +201,145 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="model-diagnostics" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">6</span> Model Diagnostics<a href="model-diagnostics.html#model-diagnostics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="optional-tasks-without-full-code" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">7</span> Optional tasks (without full code)<a href="optional-tasks-without-full-code.html#optional-tasks-without-full-code" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><br></p>
-<p>Recall once more the notation for our linear model:</p>
-<p>For <span class="math inline">\(n\)</span> observations of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> we have:</p>
-<p><span class="math display">\[y_i = \beta_0 + \beta_1 x_i + \epsilon_i\]</span></p>
-<p><span class="math inline">\(\epsilon_i \sim N(0,\sigma^2)\)</span> and <span class="math inline">\(i = 1,...,n\)</span>.</p>
-<p>The full probability model for <span class="math inline">\(y_i\)</span> given <span class="math inline">\(x_i\)</span> can be written as</p>
-<p><span class="math display">\[y_i|x_i \sim N(\beta_0 + \beta_1 x_i, \sigma^2)\]</span></p>
-<div id="assumptions-of-the-linear-model" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Assumptions of the Linear Model<a href="model-diagnostics.html#assumptions-of-the-linear-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>When we fit a simple linear regression model there are five main assumptions that have to hold in order for the model to be legitimate. These assumptions are:</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>Assumption 1:</strong> The deterministic part of the model captures all the non-random structure in the data, i.e. the residuals have mean zero.</p></li>
-<li><p><strong>Assumption 2:</strong> The scale of the variability of the residuals is constant at all values of the explanatory variables.</p></li>
-<li><p><strong>Assumption 3:</strong> The residuals are normally distributed.</p></li>
-<li><p><strong>Assumption 4:</strong> The residuals are independent.</p></li>
-<li><p><strong>Assumption 5:</strong> The values of the explanatory variables are recorded without error.</p></li>
-</ol>
+<div id="exercise-9" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> <strong>Exercise 9</strong><a href="optional-tasks-without-full-code.html#exercise-9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let's look at one of the three newer variables from <code>mlb11</code>, slugging proportion, called <code>new_slug</code>. Slugging proportion is essentially a measure of the productivity of a batter. This is one of the statistics used by the author of Moneyball.</p>
+<p>Produce a scatterplot of this variable against <code>runs</code>. Does there seem to be a linear relationship?</p>
+<div class="webex-solution">
+<button>
+Hint
+</button>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="optional-tasks-without-full-code.html#cb18-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> ???, <span class="at">mapping =</span> ???) <span class="sc">+</span></span>
+<span id="cb18-2"><a href="optional-tasks-without-full-code.html#cb18-2" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb18-3"><a href="optional-tasks-without-full-code.html#cb18-3" tabindex="-1"></a>    <span class="fu">labs</span>(???)</span></code></pre></div>
 </div>
-<div id="how-to-check-the-assumptions-of-a-linear-model" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> How to check the assumptions of a Linear Model<a href="model-diagnostics.html#how-to-check-the-assumptions-of-a-linear-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ol style="list-style-type: decimal">
-<li><p><strong>Assumption 1:</strong> Plot the residuals against the explanatory variable (e.g. <code>at_bats</code>), or plot the residuals against the fitted values (<span class="math inline">\(\hat{y}\)</span>). If the first assumption holds, i.e. the residuals have mean zero, then the residuals should be scattered randomly above and below the <span class="math inline">\(y=0\)</span> line.</p></li>
-<li><p><strong>Assumption 2:</strong> Plot the residuals against the fitted values. If the second assumption holds, i.e. the scale of the variability of the residuals is constant at all values of the explanatory variables, then the residuals should be scattered randomly across the <span class="math inline">\(y=0\)</span> line, with no fanning or any other shape, such as a parabola.</p></li>
-<li><p><strong>Assumption 3:</strong> Plot a histogram of the residuals, or make a QQ-plot. If the third assumption holds, i.e. the residuals are normally distributed, the histogram should appear normally distributed, in the usual bell shape and centred at zero. For the QQ-plot, the points should be as close to a straight diagonal line as possible.</p></li>
-<li><p><strong>Assumption 4:</strong> Difficult to formally examine and often justified on the basis of experimental context.</p></li>
-<li><p><strong>Assumption 5:</strong> Difficult to formally examine and often justified on the basis of experimental context.</p></li>
-</ol>
-<p><br></p>
-<div id="exercise-6" class="section level3 hasAnchor" number="6.2.1">
-<h3><span class="header-section-number">6.2.1</span> <strong>Exercise 6</strong><a href="model-diagnostics.html#exercise-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>For the linear model of runs against at-bats model, does the assumption that the deterministic part of the model captures all the non-random structure in the data, i.e. the residuals have mean zero, hold?</p>
-<p>Run the code below to look at the scatter plot of the model residuals on the y-axis against the fitted values on the x-axis.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="model-diagnostics.html#cb15-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> m1, <span class="fu">aes</span>(<span class="at">x =</span> .fitted, <span class="at">y =</span> .resid)) <span class="sc">+</span></span>
-<span id="cb15-2"><a href="model-diagnostics.html#cb15-2" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb15-3"><a href="model-diagnostics.html#cb15-3" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>) <span class="sc">+</span></span>
-<span id="cb15-4"><a href="model-diagnostics.html#cb15-4" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Fitted Values&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Residuals&quot;</span>)</span></code></pre></div>
-<p>In the above code, <code>geom_hline()</code> adds a horizontal dashed line at y equals zero.</p>
-<p><br></p>
-<p><strong>Does the assumption hold?</strong></p>
-<div id="radio_WDVSUALHHU" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_WDVSUALHHU" value=""></input> <span>No, since the residuals are scattered evenly above and below the zero line, indicating that the residuals have mean zero.</span></label><label><input type="radio" autocomplete="off" name="radio_WDVSUALHHU" value="answer"></input> <span>Yes, since the residuals are scattered evenly above and below the zero line, indicating that the residuals have mean zero.</span></label><label><input type="radio" autocomplete="off" name="radio_WDVSUALHHU" value=""></input> <span>No, since the residuals aren't scattered evenly above and below the zero line, indicating that the residuals do not have mean zero.</span></label><label><input type="radio" autocomplete="off" name="radio_WDVSUALHHU" value=""></input> <span>Yes, since the residuals aren't scattered evenly above and below the zero line, indicating that the residuals have non-zero mean.</span></label>
-</div>
-<p><br></p>
-</div>
-<div id="exercise-7" class="section level3 hasAnchor" number="6.2.2">
-<h3><span class="header-section-number">6.2.2</span> <strong>Exercise 7</strong><a href="model-diagnostics.html#exercise-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Using the same figure above, for the runs against at-bats model, does the assumption that the scale of the variability of the residuals is constant at all values of the explanatory variables, hold?</strong></p>
-<div id="radio_OBDGOEOPUT" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_OBDGOEOPUT" value=""></input> <span>No, since the residuals aren't scattered randomly across the zero line, there appears to be a slightly parabolic pattern.</span></label><label><input type="radio" autocomplete="off" name="radio_OBDGOEOPUT" value=""></input> <span>Yes, since the residuals aren't scattered randomly across the zero line, there appears to be a slightly parabolic pattern.</span></label><label><input type="radio" autocomplete="off" name="radio_OBDGOEOPUT" value=""></input> <span>No, since the residuals are scattered randomly across the zero line, with no apparent pattern.</span></label><label><input type="radio" autocomplete="off" name="radio_OBDGOEOPUT" value="answer"></input> <span>Yes, since the residuals are scattered randomly across the zero line, with no apparent pattern.</span></label>
-</div>
-<p><br></p>
-<p>See below for some examples of the second assumption not holding.</p>
-<p><img src="images/first-assumption.jpg" width="100%" /></p>
-<p><br></p>
-<p><strong>Exercise 8</strong></p>
-<p>For the runs against at-bats model, does the assumption that the residuals are normally distributed, hold?</p>
-<p>Run the code below to look at both the histogram and the normal Q-Q plot of the model residuals.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="model-diagnostics.html#cb16-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> m1, <span class="fu">aes</span>(<span class="at">x =</span> .resid)) <span class="sc">+</span></span>
-<span id="cb16-2"><a href="model-diagnostics.html#cb16-2" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">&quot;white&quot;</span>, <span class="at">binwidth =</span> <span class="dv">40</span>) <span class="sc">+</span></span>
-<span id="cb16-3"><a href="model-diagnostics.html#cb16-3" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">&quot;Residuals&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="model-diagnostics.html#cb17-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> m1, <span class="fu">aes</span>(<span class="at">sample =</span> .resid)) <span class="sc">+</span></span>
-<span id="cb17-2"><a href="model-diagnostics.html#cb17-2" tabindex="-1"></a>    <span class="fu">stat_qq</span>() <span class="sc">+</span></span>
-<span id="cb17-3"><a href="model-diagnostics.html#cb17-3" tabindex="-1"></a>    <span class="fu">stat_qq_line</span>()</span></code></pre></div>
-<p><br></p>
-<p><strong>Does the assumption hold?</strong></p>
-<div id="radio_QRTGIHUOMC" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_QRTGIHUOMC" value=""></input> <span>No, since the histogram looks more bi-modal than bell shaped and many of the QQ-plot points are very far from the line.</span></label><label><input type="radio" autocomplete="off" name="radio_QRTGIHUOMC" value="answer"></input> <span>Yes, while neither the histogram nor the QQ-plot are perfect, they both look adequate to show the residuals are approximately normally distributed. </span></label><label><input type="radio" autocomplete="off" name="radio_QRTGIHUOMC" value=""></input> <span>No, since the histogram looks bell shaped and centred at zero and the points fit near-perfectly onto the line, we have shown that the residuals are normally distributed.</span></label><label><input type="radio" autocomplete="off" name="radio_QRTGIHUOMC" value=""></input> <span>Yes, since the histogram looks bell shaped and centred at zero and the points fit near-perfectly onto the line, we have shown that the residuals are normally distributed.</span></label>
-</div>
-<p><br></p>
+<!--
+
+<div class='webex-solution'><button>Solution</button>
+
+
+
+``` r
+ggplot(data = mlb11, mapping = aes(x = new_slug, y = runs)) +
+    geom_point() +
+    labs(title = "Relationship between Runs and Slugging Prop.", x = "Slugging Prop.", y = "Runs")
+```
+
 
 </div>
+
+-->
+<p><br></p>
+<p><strong>Does the relationship between runs and slugging proportion look linear? If you knew a team’s slugging proportion, would you be comfortable using a linear model to predict the number of runs?</strong></p>
+<div id="radio_NUDSVTLPMZ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_NUDSVTLPMZ" value=""></input> <span>No, the relationship does not appear linear, and hence we would not be comfortable using a linear model to predict the number of runs from the slugging proportion. We would have to consider a different varaible to choose.</span></label><label><input type="radio" autocomplete="off" name="radio_NUDSVTLPMZ" value=""></input> <span>Yes, the relationship does appear moderately positive and linear. We would therefore be comfortable using a linear model to predict the number of runs from the slugging proportion.</span></label><label><input type="radio" autocomplete="off" name="radio_NUDSVTLPMZ" value="answer"></input> <span>Yes, the relationship does appear strong, positive and linear. Therefore, we would be comfortable using a linear model to predict the number of runs from the slugging proportion.</span></label><label><input type="radio" autocomplete="off" name="radio_NUDSVTLPMZ" value=""></input> <span>Yes, the relationship does appear weakly positive and linear. We would therefore be comfortable using a linear model to predict the number of runs from the slugging proportion.</span></label>
+</div>
+<p><br></p>
+</div>
+<div id="exercise-10" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> <strong>Exercise 10</strong><a href="optional-tasks-without-full-code.html#exercise-10" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Fit a linear model <code>m3</code> to this pair of variables <code>new_slug</code> and <code>runs</code>.</p>
+<div class="webex-solution">
+<button>
+Hint
+</button>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="optional-tasks-without-full-code.html#cb19-1" tabindex="-1"></a>m3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(???)</span>
+<span id="cb19-2"><a href="optional-tasks-without-full-code.html#cb19-2" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="optional-tasks-without-full-code.html#cb19-3" tabindex="-1"></a><span class="fu">summary</span>(???)</span></code></pre></div>
+</div>
+<!--
+
+<div class='webex-solution'><button>Solution</button>
+
+
+
+``` r
+m3 <- lm(runs~new_slug, data = mlb11)
+
+summary(m3)
+```
+
+
+</div>
+
+-->
+<p><br></p>
+<p><strong>How does the model between runs and slugging proportion compare to the at-bats and homeruns models?</strong></p>
+<div id="radio_PMNXANDQBN" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_PMNXANDQBN" value=""></input> <span>The new slugging model has an R^2 value of 0.897, significantly lower than the at-bats and homeruns models. Therefore slugging proportion seems to explain a lower proportion of the variability in runs, and hence does a worse job of predicting runs.</span></label><label><input type="radio" autocomplete="off" name="radio_PMNXANDQBN" value=""></input> <span>The new slugging model has an R^2 value of 0.897, roughly the same as the at-bats and homeruns models. Therefore slugging proportion seems to explain around the same proportion of the variability in runs, and hence predicts runs as well as the previous two models.</span></label><label><input type="radio" autocomplete="off" name="radio_PMNXANDQBN" value=""></input> <span>The new slugging model has an R^2 value of 0.897, significantly lower than the at-bats and homeruns models. Therefore slugging proportion seems to explain a higher proportion of the variability in runs, and hence better predicts runs.</span></label><label><input type="radio" autocomplete="off" name="radio_PMNXANDQBN" value="answer"></input> <span>The new slugging model has an R^2 value of 0.897, significantly higher than the at-bats and homeruns models. Therefore slugging proportion seems to explain a higher proportion of the variability in runs, and hence better predicts runs.</span></label>
+</div>
+<p><br></p>
+</div>
+<div id="exercise-11" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> <strong>Exercise 11</strong><a href="optional-tasks-without-full-code.html#exercise-11" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>The equation of the regression line is</strong> <input class='webex-solveme nospaces' size='1' data-answer='["C"]'/></p>
+<p><br></p>
+<p>A: <span class="math inline">\(\textrm{Slugging Prop} = -376 + 2681*\textrm{Runs}\)</span></p>
+<p>B :<span class="math inline">\(\textrm{Runs} = 2681 -376*\textrm{Slugging Prop}\)</span></p>
+<p>C: <span class="math inline">\(\textrm{Runs} = -376 + 2681*\textrm{Slugging Prop}\)</span></p>
+<p>D: <span class="math inline">\(\textrm{Slugging Prop} = 2681 - 376*\textrm{Runs}\)</span></p>
+<p><br></p>
+<p><strong>What does the slope tell us in the context of the relationship between the success of a team and its slugging percentage?</strong></p>
+<div id="radio_YJTWFNTXOD" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_YJTWFNTXOD" value=""></input> <span>For a unit increase in runs, the expected slugging prop in that season decreases by 2681</span></label><label><input type="radio" autocomplete="off" name="radio_YJTWFNTXOD" value="answer"></input> <span>For a unit increase in slugging prop, the expected number of runs they hit in that season increases by 2681.</span></label><label><input type="radio" autocomplete="off" name="radio_YJTWFNTXOD" value=""></input> <span>For a unit increase in slugging prop, the expected number of runs they hit in that season decreases by 2681</span></label><label><input type="radio" autocomplete="off" name="radio_YJTWFNTXOD" value=""></input> <span>For a unit increase in runs, the expected slugging prop in that season increases by 2681.</span></label>
+</div>
+<p><br></p>
+</div>
+<div id="exercise-12" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> <strong>Exercise 12</strong><a href="optional-tasks-without-full-code.html#exercise-12" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>combine your graph from Exercise 9 with the fitted regression line from the model superimposed on top. Rather than using <code>geom_smooth()</code> to do this, try using <code>geom_abline</code> with the appropriate values for the slope and intercept from the model.</p>
+<div class="webex-solution">
+<button>
+Hint
+</button>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="optional-tasks-without-full-code.html#cb20-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> ???, <span class="at">mapping =</span> ???) <span class="sc">+</span></span>
+<span id="cb20-2"><a href="optional-tasks-without-full-code.html#cb20-2" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb20-3"><a href="optional-tasks-without-full-code.html#cb20-3" tabindex="-1"></a>    <span class="fu">labs</span>(???) <span class="sc">+</span> </span>
+<span id="cb20-4"><a href="optional-tasks-without-full-code.html#cb20-4" tabindex="-1"></a>    <span class="fu">geom_abline</span>(<span class="at">intercept =</span> ??, <span class="at">slope =</span> ??)</span></code></pre></div>
+</div>
+<!--
+
+<div class='webex-solution'><button>Solution</button>
+
+
+
+``` r
+ggplot(data = mlb11, mapping = aes(x = new_slug, y = runs)) +
+    geom_point() +
+    labs(title = "Relationship between Runs and Slugging Prop.", x = "Slugging Prop.", y = "Runs")+ 
+    geom_abline(intercept = -375.80, slope = 2681.33)
+
+ggplot(data = mlb11, mapping = aes(x = new_slug, y = runs)) +
+    geom_point() +
+    labs(title = "Relationship between Runs and Slugging Prop.", x = "Slugging Prop.", y = "Runs")+ 
+    geom_abline(intercept = coef(m3)[["(Intercept)"]], 
+                slope = coef(m3)[["new_slug"]])
+```
+
+
+</div>
+
+-->
+<p><br></p>
+</div>
+<div id="exercise-13" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> <strong>Exercise 13</strong><a href="optional-tasks-without-full-code.html#exercise-13" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Do all the model assumptions hold?</strong></p>
+<div id="radio_NBTDHZHGVE" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_NBTDHZHGVE" value=""></input> <span>The points are not randomly scattered across and above/below zero line, so constant variance and mean zero residual assumptions do not hold. The histogram still looks relatively normal and the qq-plot looks relatively straight and diagonal, so the normally distributed residual assumption seems to hold however. The final two assumptions are hard for us to verify, but we will assume they hold</span></label><label><input type="radio" autocomplete="off" name="radio_NBTDHZHGVE" value="answer"></input> <span>The points are randomly scattered across and above/below zero line, so constant variance and mean zero residual assumptions
+hold. The histogram still looks relatively normal and the qq-plot looks relatively straight and diagonal, so the normally distributed residual assumption seems to hold also. The final two assumptions are hard for us to verify, but we will assume they hold</span></label><label><input type="radio" autocomplete="off" name="radio_NBTDHZHGVE" value=""></input> <span>The points are not randomly scattered across and above/below zero line, so constant variance and mean zero residual assumptions do not hold. The histogram also looks non-normal and the qq-plot has too many deviations from the diagonal line, so the normally distributed residual assumption seems to fail as well. The final two assumptions are hard for us to verify, but we will assume they hold.</span></label><label><input type="radio" autocomplete="off" name="radio_NBTDHZHGVE" value=""></input> <span>The points are randomly scattered across and above/below zero line, so constant variance and mean zero residual assumptions
+hold. The histogram still looks relatively normal and the qq-plot looks relatively straight and diagonal, so the normally distributed residual assumption seems to hold also. The final two assumptions are hard for us to verify, so we assume they don't hold.</span></label>
+</div>
+<p><br></p>
+</div>
+<div id="exercise-14" class="section level2 hasAnchor" number="7.6">
+<h2><span class="header-section-number">7.6</span> <strong>Exercise 14</strong><a href="optional-tasks-without-full-code.html#exercise-14" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Assuming the new model assumptions hold, of the three models considered in this lab, which model do you suggest is best at predicting <code>runs</code> and why?</p>
+<p><br></p>
+
 </div>
 </div>
 <script>
@@ -452,8 +518,8 @@ window.onload = function() {
           </div>
         </div>
       </div>
-<a href="prediction-and-prediction-errors.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="optional-tasks-without-full-code.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="model-diagnostics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="group-exercise.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

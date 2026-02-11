@@ -1,4 +1,4 @@
-# Bringing it all together
+# Optional tasks (without full code)
 
 <br>
 
@@ -18,7 +18,7 @@ ggplot(data = ???, mapping = ???) +
 
 `r unhide()`
 
-
+<!--
 `r hide("Solution")`
 
 ```{r sol9, eval = FALSE, echo = TRUE}
@@ -28,7 +28,7 @@ ggplot(data = mlb11, mapping = aes(x = new_slug, y = runs)) +
 ```
 
 `r unhide()`
-
+-->
 <br>
 
 **Does the relationship between runs and slugging proportion look linear? If you knew a team’s slugging proportion, would you be comfortable using a linear model to predict the number of runs?**
@@ -61,7 +61,7 @@ summary(???)
 
 `r unhide()`
 
-
+<!--
 `r hide("Solution")`
 
 ```{r sol10, eval = FALSE, echo = TRUE}
@@ -71,7 +71,7 @@ summary(m3)
 ```
 
 `r unhide()`
-
+-->
 <br>
 
 **How does the model between runs and slugging proportion compare to the at-bats and homeruns models?**
@@ -126,68 +126,40 @@ q_name <- sample(c(
 
 ## **Exercise 12**
 
-Check the model assumptions of the new model. Do they all hold?
+combine your graph from Exercise 9 with the fitted regression line from the model superimposed on top. Rather than using `geom_smooth()` to do this, try using `geom_abline` with the appropriate values for the slope and intercept from the model.
 
-`r hide("Hint 1")`
+`r hide("Hint")`
 
 ```{r hint12_1, eval = FALSE, echo = TRUE}
-ggplot(???) +
-    geom_???() +
-    geom_hline(???) +
-    labs(???)
-
-ggplot(???) +
-    geom_???(???) +
-    xlab(???)
-
-ggplot(???) +
-    stat_qq() +
-    stat_qq_line()
-```
-
-`r unhide()`
-
-
-`r hide("Hint 2")`
-
-```{r hint12_2, eval = FALSE, echo = TRUE}
-ggplot(???) +
+ggplot(data = ???, mapping = ???) +
     geom_point() +
-    geom_hline(???) +
-    labs(x = "Fitted Values", y = "Residuals")
-
-ggplot(???) +
-    geom_histogram(???) +
-    xlab("Residuals")
-
-ggplot(???) +
-    stat_qq() +
-    stat_qq_line()
+    labs(???) + 
+    geom_abline(intercept = ??, slope = ??)
 ```
 
 `r unhide()`
 
-
+<!--
 `r hide("Solution")`
 
 ```{r sol12, eval = FALSE, echo = TRUE}
-ggplot(data = m3, aes(x = .fitted, y = .resid)) +
+ggplot(data = mlb11, mapping = aes(x = new_slug, y = runs)) +
     geom_point() +
-    geom_hline(yintercept = 0, linetype = "dashed") +
-    labs(x = "Fitted Values", y = "Residuals")
+    labs(title = "Relationship between Runs and Slugging Prop.", x = "Slugging Prop.", y = "Runs")+ 
+    geom_abline(intercept = -375.80, slope = 2681.33)
 
-ggplot(data = m3, aes(x = .resid)) +
-    geom_histogram(color = "white", binwidth = 15) +
-    xlab("Residuals")
-
-ggplot(data = m3, aes(sample = .resid)) +
-    stat_qq() +
-    stat_qq_line()
+ggplot(data = mlb11, mapping = aes(x = new_slug, y = runs)) +
+    geom_point() +
+    labs(title = "Relationship between Runs and Slugging Prop.", x = "Slugging Prop.", y = "Runs")+ 
+    geom_abline(intercept = coef(m3)[["(Intercept)"]], 
+                slope = coef(m3)[["new_slug"]])
 ```
 
 `r unhide()`
-
+-->
 <br>
+
+## **Exercise 13**
 
 **Do all the model assumptions hold?**
 
@@ -207,7 +179,7 @@ hold. The histogram still looks relatively normal and the qq-plot looks relative
 
 <br>
 
-## **Exercise 13**
+## **Exercise 14**
 
 Assuming the new model assumptions hold, of the three models considered in this lab, which model do you suggest is best at predicting `runs` and why? 
 

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>8 Group Exercise | S1Z Lab 3</title>
   <meta name="description" content="8 Group Exercise | S1Z Lab 3" />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
   <meta property="og:title" content="8 Group Exercise | S1Z Lab 3" />
   <meta property="og:type" content="book" />
@@ -28,7 +28,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="bringing-it-all-together.html"/>
+<link rel="prev" href="optional-tasks-without-full-code.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -53,6 +53,7 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -117,6 +118,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="include/webex.css" type="text/css" />
@@ -166,13 +171,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.2.2" data-path="model-diagnostics.html"><a href="model-diagnostics.html#exercise-7"><i class="fa fa-check"></i><b>6.2.2</b> <strong>Exercise 7</strong></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="bringing-it-all-together.html"><a href="bringing-it-all-together.html"><i class="fa fa-check"></i><b>7</b> Bringing it all together</a>
+<li class="chapter" data-level="7" data-path="optional-tasks-without-full-code.html"><a href="optional-tasks-without-full-code.html"><i class="fa fa-check"></i><b>7</b> Optional tasks (without full code)</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="bringing-it-all-together.html"><a href="bringing-it-all-together.html#exercise-9"><i class="fa fa-check"></i><b>7.1</b> <strong>Exercise 9</strong></a></li>
-<li class="chapter" data-level="7.2" data-path="bringing-it-all-together.html"><a href="bringing-it-all-together.html#exercise-10"><i class="fa fa-check"></i><b>7.2</b> <strong>Exercise 10</strong></a></li>
-<li class="chapter" data-level="7.3" data-path="bringing-it-all-together.html"><a href="bringing-it-all-together.html#exercise-11"><i class="fa fa-check"></i><b>7.3</b> <strong>Exercise 11</strong></a></li>
-<li class="chapter" data-level="7.4" data-path="bringing-it-all-together.html"><a href="bringing-it-all-together.html#exercise-12"><i class="fa fa-check"></i><b>7.4</b> <strong>Exercise 12</strong></a></li>
-<li class="chapter" data-level="7.5" data-path="bringing-it-all-together.html"><a href="bringing-it-all-together.html#exercise-13"><i class="fa fa-check"></i><b>7.5</b> <strong>Exercise 13</strong></a></li>
+<li class="chapter" data-level="7.1" data-path="optional-tasks-without-full-code.html"><a href="optional-tasks-without-full-code.html#exercise-9"><i class="fa fa-check"></i><b>7.1</b> <strong>Exercise 9</strong></a></li>
+<li class="chapter" data-level="7.2" data-path="optional-tasks-without-full-code.html"><a href="optional-tasks-without-full-code.html#exercise-10"><i class="fa fa-check"></i><b>7.2</b> <strong>Exercise 10</strong></a></li>
+<li class="chapter" data-level="7.3" data-path="optional-tasks-without-full-code.html"><a href="optional-tasks-without-full-code.html#exercise-11"><i class="fa fa-check"></i><b>7.3</b> <strong>Exercise 11</strong></a></li>
+<li class="chapter" data-level="7.4" data-path="optional-tasks-without-full-code.html"><a href="optional-tasks-without-full-code.html#exercise-12"><i class="fa fa-check"></i><b>7.4</b> <strong>Exercise 12</strong></a></li>
+<li class="chapter" data-level="7.5" data-path="optional-tasks-without-full-code.html"><a href="optional-tasks-without-full-code.html#exercise-13"><i class="fa fa-check"></i><b>7.5</b> <strong>Exercise 13</strong></a></li>
+<li class="chapter" data-level="7.6" data-path="optional-tasks-without-full-code.html"><a href="optional-tasks-without-full-code.html#exercise-14"><i class="fa fa-check"></i><b>7.6</b> <strong>Exercise 14</strong></a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="group-exercise.html"><a href="group-exercise.html"><i class="fa fa-check"></i><b>8</b> Group Exercise</a>
 <ul>
@@ -202,13 +208,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Two sleep variables (dreaming and non dreaming) were recorded. Variables such as life span, body weight, brain weight and gestation time were evaluated.</p>
 <p>Ecological variables such as severity of predation, safety of sleeping place and overall danger were inferred from field observations in the literature.</p>
 <p>The data to be analyzed are saved in a <code>.csv</code> file called <code>mammals.csv</code> which can be imported using the following code.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="group-exercise.html#cb25-1" aria-hidden="true" tabindex="-1"></a>mammals <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://raw.githubusercontent.com/Glasgow-Stats-L1-L2/S1Z_Lab3/main/mammals.csv&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="group-exercise.html#cb21-1" tabindex="-1"></a>mammals <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://raw.githubusercontent.com/Glasgow-Stats-L1-L2/S1Z_Lab3/main/mammals.csv&quot;</span>))</span></code></pre></div>
 <p>You may download the dataset named <code>mammals.csv</code> file from our Moodle course page. Once the file has downloaded, <strong>save it in the same folder</strong> as the <code>R</code> script file you created and saved for this lab. You should now set your working directory to this location by clicking <code>Session &gt; Set Working Directory &gt; To Source File Location</code>. You can load the data set into your workspace by running <code>mammals &lt;- read.csv("mammals.csv")</code>.
 <br></p>
 <div id="tasks" class="section level2 hasAnchor" number="8.1">
 <h2><span class="header-section-number">8.1</span> Tasks<a href="group-exercise.html#tasks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><br></p>
-<p>Repeat Exercises 9-12 again (written below as 1. - 4.) with two variables of your choosing from the <code>mammals</code> data set. e.g. you could examine the relationship between a species' brain weight (<span class="math inline">\(x\)</span>) and the total amount of sleep they get (<span class="math inline">\(y\)</span>). But it's up to you, as long as you have the explanatory and response variables in a way round that makes sense and they are both numeric. You may wish to consider an appropriate transformation of the data (e.g. <code>log()</code>), particularly for any variables with a small number of large outliers.</p>
+<p>Complete the following tasks with with two variables of your choosing from the <code>mammals</code> data set. e.g. you could examine the relationship between a species' brain weight (<span class="math inline">\(x\)</span>) and the total amount of sleep they get (<span class="math inline">\(y\)</span>). But it's up to you, as long as you have the explanatory and response variables in a way round that makes sense and they are both numeric. You may wish to consider an appropriate transformation of the data (e.g. <code>log()</code>), particularly for any variables with a small number of large outliers.</p>
 <p><br></p>
 <ol style="list-style-type: decimal">
 <li>Produce a scatterplot of the variables. Does there seem to be a linear relationship?</li>
@@ -405,7 +411,7 @@ window.onload = function() {
           </div>
         </div>
       </div>
-<a href="bringing-it-all-together.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="optional-tasks-without-full-code.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
@@ -420,41 +426,41 @@ window.onload = function() {
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": null,
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["main.pdf", "main.epub"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section",
-"scroll_highlight": true
-},
-"info": true
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["main.pdf", "main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  },
+  "info": true
 });
 });
 </script>
