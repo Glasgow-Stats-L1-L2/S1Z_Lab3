@@ -53,9 +53,8 @@
 
 
 <style type="text/css">
-html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -65,7 +64,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -217,14 +216,14 @@ Look at the graphs below. These show different lines, (with different gradients 
 <li><p><strong>Blue Line:</strong> Represents the residual of each point. Remember that the residual <span class="math inline">\(e_i = y_i - \hat{y_i}\)</span>, so the blue line represents the difference between the observed value, the point, and the fitted value, the place at which the point meets the line going straight up/down towards it.</p></li>
 <li><p><strong>Orange Squares:</strong> This represents the square of each residual. As in literally the area of each orange circle <span class="math inline">\(= e_i^2\)</span>.</p></li>
 </ul>
-<p><img src="images/Trio.jpg" width="100%" /></p>
+<p><img src="images/Trio.jpg" alt="" width="100%" /></p>
 <p>The most common way to do linear regression is to select the line that minimizes the sum of squared residuals. Literally the line that creates the smallest total area when you add up the area of all of the orange squares.</p>
 <p>You can see in the figure that some lines will be better than others, and you could probably give a reasonable guess by eye, like you did at some point in school.</p>
 <p>The process of minimising the sum of the squares of the residuals is just a way of mathematically/statistically formalising the procedure of eyeballing the best fitting line.</p>
 <p><br></p>
 <p><strong>What happens to the residuals when the line doesn't fit the points very well?</strong></p>
-<div id="radio_LPWMGCGVYD" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_LPWMGCGVYD" value=""></input> <span>Too many of the points will be too far from the line, hence the residuals will be small. In turn, the residual sum of squares, (the total area of all the orange squares), will be too large.</span></label><label><input type="radio" autocomplete="off" name="radio_LPWMGCGVYD" value="answer"></input> <span>Too many of the points will be too far from the line, hence the residuals will be too large. In turn, the residual sum of squares, (the total area of all the orange squares), will be too large.</span></label><label><input type="radio" autocomplete="off" name="radio_LPWMGCGVYD" value=""></input> <span>Not many of the points will be very far from the line, hence the residuals will be small. In turn, the residual sum of squares, (the total area of all the orange squares), will be small.</span></label><label><input type="radio" autocomplete="off" name="radio_LPWMGCGVYD" value=""></input> <span>Too many of the points will be too far from the line, hence the residuals will be too small In turn, the residual sum of squares, (the total area of all the orange squares), will be too small.</span></label>
+<div id="radio_FEUHNDAHVN" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_FEUHNDAHVN" value="answer"></input> <span>Too many of the points will be too far from the line, hence the residuals will be too large. In turn, the residual sum of squares, (the total area of all the orange squares), will be too large.</span></label><label><input type="radio" autocomplete="off" name="radio_FEUHNDAHVN" value=""></input> <span>Not many of the points will be very far from the line, hence the residuals will be small. In turn, the residual sum of squares, (the total area of all the orange squares), will be small.</span></label><label><input type="radio" autocomplete="off" name="radio_FEUHNDAHVN" value=""></input> <span>Too many of the points will be too far from the line, hence the residuals will be small. In turn, the residual sum of squares, (the total area of all the orange squares), will be too large.</span></label><label><input type="radio" autocomplete="off" name="radio_FEUHNDAHVN" value=""></input> <span>Too many of the points will be too far from the line, hence the residuals will be too small In turn, the residual sum of squares, (the total area of all the orange squares), will be too small.</span></label>
 </div>
 <p><br></p>
 

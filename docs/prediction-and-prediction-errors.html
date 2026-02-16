@@ -53,9 +53,8 @@
 
 
 <style type="text/css">
-html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -65,7 +64,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -214,13 +213,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The regression line can be used to predict <span class="math inline">\(y\)</span> at any value of <span class="math inline">\(x\)</span> within the range of observed <span class="math inline">\(x\)</span> values..</p>
 <p><br></p>
 <p><strong>Interpolation is when...</strong></p>
-<div id="radio_RXZWHHECBB" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_RXZWHHECBB" value="answer"></input> <span>Predictions for y are made from values of x within the range of observed data.</span></label><label><input type="radio" autocomplete="off" name="radio_RXZWHHECBB" value=""></input> <span>Predictions for y are made from values of x outside the range of observed data.</span></label>
+<div id="radio_KFDULVGBGY" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_KFDULVGBGY" value=""></input> <span>Predictions for y are made from values of x outside the range of observed data.</span></label><label><input type="radio" autocomplete="off" name="radio_KFDULVGBGY" value="answer"></input> <span>Predictions for y are made from values of x within the range of observed data.</span></label>
 </div>
 <p><br></p>
 <p><strong>Extrapolation is when...</strong></p>
-<div id="radio_IMXMDBDTTB" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_IMXMDBDTTB" value="answer"></input> <span>Predictions for y are made from values of x outside the range of observed data.</span></label><label><input type="radio" autocomplete="off" name="radio_IMXMDBDTTB" value=""></input> <span>Predictions for y are made from values of x within the range of observed data.</span></label>
+<div id="radio_MCWBSOMUJP" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_MCWBSOMUJP" value="answer"></input> <span>Predictions for y are made from values of x outside the range of observed data.</span></label><label><input type="radio" autocomplete="off" name="radio_MCWBSOMUJP" value=""></input> <span>Predictions for y are made from values of x within the range of observed data.</span></label>
 </div>
 <p>Extrapolation is not usually recommended. Predictions made within the range of the data are more reliable, and are also used to compute the residuals.</p>
 <p><br></p>
@@ -230,8 +229,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>To the nearest whole number, the New York Yankees had 867 runs and 5518 at-bats in the 2011 season. The residual for the New York Yankees is <input class='webex-solveme nospaces' size='3' data-answer='["177"]'/></p>
 <p><br></p>
 <p><strong>Based on your previous answer, is the fitted value for the New York Yankees an overestimate or underestimate of their runs?</strong></p>
-<div id="radio_ENGKQRQVWN" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ENGKQRQVWN" value="answer"></input> <span>An underestimate. The positive residual implies the observed value is larger than the fitted value i.e. the value given by the regression line has underestimated the actual value.</span></label><label><input type="radio" autocomplete="off" name="radio_ENGKQRQVWN" value=""></input> <span>An overestimate. The negative residual implies the observed value is larger than the fitted value i.e. the value given by the regression line has overestimated the actual value.</span></label><label><input type="radio" autocomplete="off" name="radio_ENGKQRQVWN" value=""></input> <span>An overestimate. The positive residual implies the fitted value is larger than the observed value i.e. the value given by the regression line has overestimated the actual value.</span></label><label><input type="radio" autocomplete="off" name="radio_ENGKQRQVWN" value=""></input> <span>An underestimate. The negative residual implies the fitted value is larger than the observed value i.e. the value given by the regression line has underestimated the actual value.</span></label>
+<div id="radio_ZTTKJFSVCH" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ZTTKJFSVCH" value="answer"></input> <span>An underestimate. The positive residual implies the observed value is larger than the fitted value i.e. the value given by the regression line has underestimated the actual value.</span></label><label><input type="radio" autocomplete="off" name="radio_ZTTKJFSVCH" value=""></input> <span>An overestimate. The positive residual implies the fitted value is larger than the observed value i.e. the value given by the regression line has overestimated the actual value.</span></label><label><input type="radio" autocomplete="off" name="radio_ZTTKJFSVCH" value=""></input> <span>An underestimate. The negative residual implies the fitted value is larger than the observed value i.e. the value given by the regression line has underestimated the actual value.</span></label><label><input type="radio" autocomplete="off" name="radio_ZTTKJFSVCH" value=""></input> <span>An overestimate. The negative residual implies the observed value is larger than the fitted value i.e. the value given by the regression line has overestimated the actual value.</span></label>
 </div>
 <p><br></p>
 </div>
@@ -240,8 +239,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>To the nearest whole number. the Chicago Cubs had 654 runs and 5549 at-bats in the 2011 season. The residual for the Chicago Cubs is <input class='webex-solveme nospaces' size='3' data-answer='["-56"]'/></p>
 <p><br></p>
 <p><strong>Based on your previous answer, is the fitted value for the Chicago Cubs an overestimate or underestimate of their runs?</strong></p>
-<div id="radio_ZNYPTTSHGD" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ZNYPTTSHGD" value=""></input> <span>An underestimate. The negative residual implies the observed value is smaller than the fitted value i.e. the value given by the regression line has underestimated the actual value.</span></label><label><input type="radio" autocomplete="off" name="radio_ZNYPTTSHGD" value=""></input> <span>An overestimate. The positive residual implies the observed value is larger than the fitted value i.e. the value given by the regression line has overestimated the actual value.</span></label><label><input type="radio" autocomplete="off" name="radio_ZNYPTTSHGD" value="answer"></input> <span>An overestimate. The negative residual implies the observed value is smaller than the fitted value i.e. the value given by the regression line has overestimated the actual value.</span></label><label><input type="radio" autocomplete="off" name="radio_ZNYPTTSHGD" value=""></input> <span>An underestimate. The negative residual implies the observed value is larger than the fitted value i.e. the value given by the regression line has underestimated the actual value.</span></label>
+<div id="radio_AMJYUHMPMI" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_AMJYUHMPMI" value="answer"></input> <span>An overestimate. The negative residual implies the observed value is smaller than the fitted value i.e. the value given by the regression line has overestimated the actual value.</span></label><label><input type="radio" autocomplete="off" name="radio_AMJYUHMPMI" value=""></input> <span>An underestimate. The negative residual implies the observed value is smaller than the fitted value i.e. the value given by the regression line has underestimated the actual value.</span></label><label><input type="radio" autocomplete="off" name="radio_AMJYUHMPMI" value=""></input> <span>An underestimate. The negative residual implies the observed value is larger than the fitted value i.e. the value given by the regression line has underestimated the actual value.</span></label><label><input type="radio" autocomplete="off" name="radio_AMJYUHMPMI" value=""></input> <span>An overestimate. The positive residual implies the observed value is larger than the fitted value i.e. the value given by the regression line has overestimated the actual value.</span></label>
 </div>
 <p><br></p>
 

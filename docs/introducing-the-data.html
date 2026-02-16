@@ -53,9 +53,8 @@
 
 
 <style type="text/css">
-html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -65,7 +64,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -204,7 +203,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="introducing-the-data" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">2</span> Introducing the Data<a href="introducing-the-data.html#introducing-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><br></p>
-<p><img src="images/moneyball.jpg" width="75%" /></p>
+<p><img src="images/moneyball.jpg" alt="" width="75%" /></p>
 <p><br></p>
 <p>The movie Moneyball follows a low-budget American baseball team, the Oakland Athletics, who believed that underused statistics, such as a player’s ability to get on base, better predict the ability to score runs, compared to statistics typically used like home runs and batting average. Obtaining players who excelled in these underused statistics turned out to be much more affordable for the team.</p>
 <p>In this lab we’ll be looking at data from all US Major League Baseball teams and examining the linear relationship between runs scored in a season and a number of other player statistics.</p>
@@ -256,8 +255,8 @@ Solution
 </div>
 <p><br></p>
 <p><strong>Does the relationship between runs and at-bats look linear? If you knew a team’s at-bats, would you be comfortable using a linear model to predict the number of runs?</strong></p>
-<div id="radio_ELCOWUZMJQ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ELCOWUZMJQ" value=""></input> <span>Yes, the relationship does appear approximately linear. However, we would not be comfortable using a linear model to predict the number of runs from the at-bats. We would have to consider a different varaible to choose.</span></label><label><input type="radio" autocomplete="off" name="radio_ELCOWUZMJQ" value="answer"></input> <span>Yes, the relationship does appear approximately linear. We would therefore be comfortable using a linear model to predict the number of runs from the at-bats.</span></label><label><input type="radio" autocomplete="off" name="radio_ELCOWUZMJQ" value=""></input> <span>No, the relationship does not appear linear. However, despite it's non-linearity we could still use a regression model to predict the number of runs from the at-bats.</span></label><label><input type="radio" autocomplete="off" name="radio_ELCOWUZMJQ" value=""></input> <span>No, the relationship does not appear linear, and hence we would not be comfortable using a linear model to predict the number of runs from the at-bats. We would have to consider a different varaible to choose.</span></label>
+<div id="radio_QEXKFQTTHH" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_QEXKFQTTHH" value="answer"></input> <span>Yes, the relationship does appear approximately linear. We would therefore be comfortable using a linear model to predict the number of runs from the at-bats.</span></label><label><input type="radio" autocomplete="off" name="radio_QEXKFQTTHH" value=""></input> <span>No, the relationship does not appear linear, and hence we would not be comfortable using a linear model to predict the number of runs from the at-bats. We would have to consider a different varaible to choose.</span></label><label><input type="radio" autocomplete="off" name="radio_QEXKFQTTHH" value=""></input> <span>Yes, the relationship does appear approximately linear. However, we would not be comfortable using a linear model to predict the number of runs from the at-bats. We would have to consider a different varaible to choose.</span></label><label><input type="radio" autocomplete="off" name="radio_QEXKFQTTHH" value=""></input> <span>No, the relationship does not appear linear. However, despite it's non-linearity we could still use a regression model to predict the number of runs from the at-bats.</span></label>
 </div>
 <p><br></p>
 <p>If the relationship looks linear, we can quantify the strength of the relationship with the correlation coefficient. There is quite a lot of room for interpretation when looking at correlation coefficients, but a rough guide to interpreting them is given below.</p>
@@ -300,8 +299,8 @@ Solution
 <span id="cb7-2"><a href="introducing-the-data.html#cb7-2" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="fu">cor</span>(runs, at_bats))</span></code></pre></div>
 <p><br></p>
 <p><strong>Looking at your plot and the correlation coefficient you just calculated, how would you describe the relationship between the two variables?</strong></p>
-<div id="radio_WYSMZBEODH" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_WYSMZBEODH" value="answer"></input> <span>There appears to be a moderate positive linear relationship between the runs of a Major League baseball team and their at-bats. There aren't any particularly unusual observations, but the point at roughly (5525, 870) could be considered slightly unusual.</span></label><label><input type="radio" autocomplete="off" name="radio_WYSMZBEODH" value=""></input> <span>There appears to be a moderate positive linear relationship between the runs of a Major League baseball team and their at-bats. There aren't any unusual observations</span></label><label><input type="radio" autocomplete="off" name="radio_WYSMZBEODH" value=""></input> <span>There appears to be a strong positive linear relationship between the runs of a Major League baseball team and their at-bats. There aren't any particularly unusual observations, but the point at roughly (5525, 870) could be considered slightly unusual.</span></label><label><input type="radio" autocomplete="off" name="radio_WYSMZBEODH" value=""></input> <span>There appears to be a weak positive linear relationship between the runs of a Major League baseball team and their at-bats. There aren't any unusual observations.</span></label>
+<div id="radio_BRGUGCNUAQ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_BRGUGCNUAQ" value=""></input> <span>There appears to be a strong positive linear relationship between the runs of a Major League baseball team and their at-bats. There aren't any particularly unusual observations, but the point at roughly (5525, 870) could be considered slightly unusual.</span></label><label><input type="radio" autocomplete="off" name="radio_BRGUGCNUAQ" value=""></input> <span>There appears to be a weak positive linear relationship between the runs of a Major League baseball team and their at-bats. There aren't any unusual observations.</span></label><label><input type="radio" autocomplete="off" name="radio_BRGUGCNUAQ" value=""></input> <span>There appears to be a moderate positive linear relationship between the runs of a Major League baseball team and their at-bats. There aren't any unusual observations</span></label><label><input type="radio" autocomplete="off" name="radio_BRGUGCNUAQ" value="answer"></input> <span>There appears to be a moderate positive linear relationship between the runs of a Major League baseball team and their at-bats. There aren't any particularly unusual observations, but the point at roughly (5525, 870) could be considered slightly unusual.</span></label>
 </div>
 <p><br></p>
 

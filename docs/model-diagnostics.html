@@ -53,9 +53,8 @@
 
 
 <style type="text/css">
-html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -65,7 +64,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -242,20 +241,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>In the above code, <code>geom_hline()</code> adds a horizontal dashed line at y equals zero.</p>
 <p><br></p>
 <p><strong>Does the assumption hold?</strong></p>
-<div id="radio_TJUXUCVDHX" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_TJUXUCVDHX" value="answer"></input> <span>Yes, since the residuals are scattered evenly above and below the zero line, indicating that the residuals have mean zero.</span></label><label><input type="radio" autocomplete="off" name="radio_TJUXUCVDHX" value=""></input> <span>No, since the residuals aren't scattered evenly above and below the zero line, indicating that the residuals do not have mean zero.</span></label><label><input type="radio" autocomplete="off" name="radio_TJUXUCVDHX" value=""></input> <span>Yes, since the residuals aren't scattered evenly above and below the zero line, indicating that the residuals have non-zero mean.</span></label><label><input type="radio" autocomplete="off" name="radio_TJUXUCVDHX" value=""></input> <span>No, since the residuals are scattered evenly above and below the zero line, indicating that the residuals have mean zero.</span></label>
+<div id="radio_IZJEXQUQUJ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_IZJEXQUQUJ" value="answer"></input> <span>Yes, since the residuals are scattered evenly above and below the zero line, indicating that the residuals have mean zero.</span></label><label><input type="radio" autocomplete="off" name="radio_IZJEXQUQUJ" value=""></input> <span>No, since the residuals aren't scattered evenly above and below the zero line, indicating that the residuals do not have mean zero.</span></label><label><input type="radio" autocomplete="off" name="radio_IZJEXQUQUJ" value=""></input> <span>Yes, since the residuals aren't scattered evenly above and below the zero line, indicating that the residuals have non-zero mean.</span></label><label><input type="radio" autocomplete="off" name="radio_IZJEXQUQUJ" value=""></input> <span>No, since the residuals are scattered evenly above and below the zero line, indicating that the residuals have mean zero.</span></label>
 </div>
 <p><br></p>
 </div>
 <div id="exercise-7" class="section level3 hasAnchor" number="6.2.2">
 <h3><span class="header-section-number">6.2.2</span> <strong>Exercise 7</strong><a href="model-diagnostics.html#exercise-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Using the same figure above, for the runs against at-bats model, does the assumption that the scale of the variability of the residuals is constant at all values of the explanatory variables, hold?</strong></p>
-<div id="radio_QLQGUFWPYV" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_QLQGUFWPYV" value=""></input> <span>No, since the residuals aren't scattered randomly across the zero line, there appears to be a slightly parabolic pattern.</span></label><label><input type="radio" autocomplete="off" name="radio_QLQGUFWPYV" value=""></input> <span>No, since the residuals are scattered randomly across the zero line, with no apparent pattern.</span></label><label><input type="radio" autocomplete="off" name="radio_QLQGUFWPYV" value=""></input> <span>Yes, since the residuals aren't scattered randomly across the zero line, there appears to be a slightly parabolic pattern.</span></label><label><input type="radio" autocomplete="off" name="radio_QLQGUFWPYV" value="answer"></input> <span>Yes, since the residuals are scattered randomly across the zero line, with no apparent pattern.</span></label>
+<div id="radio_IDBYQJCXHK" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_IDBYQJCXHK" value=""></input> <span>Yes, since the residuals aren't scattered randomly across the zero line, there appears to be a slightly parabolic pattern.</span></label><label><input type="radio" autocomplete="off" name="radio_IDBYQJCXHK" value=""></input> <span>No, since the residuals are scattered randomly across the zero line, with no apparent pattern.</span></label><label><input type="radio" autocomplete="off" name="radio_IDBYQJCXHK" value="answer"></input> <span>Yes, since the residuals are scattered randomly across the zero line, with no apparent pattern.</span></label><label><input type="radio" autocomplete="off" name="radio_IDBYQJCXHK" value=""></input> <span>No, since the residuals aren't scattered randomly across the zero line, there appears to be a slightly parabolic pattern.</span></label>
 </div>
 <p><br></p>
 <p>See below for some examples of the second assumption not holding.</p>
-<p><img src="images/first-assumption.jpg" width="100%" /></p>
+<p><img src="images/first-assumption.jpg" alt="" width="100%" /></p>
 <p><br></p>
 <p><strong>Exercise 8</strong></p>
 <p>For the runs against at-bats model, does the assumption that the residuals are normally distributed, hold?</p>
@@ -268,8 +267,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb17-3"><a href="model-diagnostics.html#cb17-3" tabindex="-1"></a>    <span class="fu">stat_qq_line</span>()</span></code></pre></div>
 <p><br></p>
 <p><strong>Does the assumption hold?</strong></p>
-<div id="radio_WKMRGFIARW" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_WKMRGFIARW" value=""></input> <span>No, since the histogram looks bell shaped and centred at zero and the points fit near-perfectly onto the line, we have shown that the residuals are normally distributed.</span></label><label><input type="radio" autocomplete="off" name="radio_WKMRGFIARW" value=""></input> <span>No, since the histogram looks more bi-modal than bell shaped and many of the QQ-plot points are very far from the line.</span></label><label><input type="radio" autocomplete="off" name="radio_WKMRGFIARW" value="answer"></input> <span>Yes, while neither the histogram nor the QQ-plot are perfect, they both look adequate to show the residuals are approximately normally distributed. </span></label><label><input type="radio" autocomplete="off" name="radio_WKMRGFIARW" value=""></input> <span>Yes, since the histogram looks bell shaped and centred at zero and the points fit near-perfectly onto the line, we have shown that the residuals are normally distributed.</span></label>
+<div id="radio_TJNDSPRMGQ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_TJNDSPRMGQ" value=""></input> <span>No, since the histogram looks bell shaped and centred at zero and the points fit near-perfectly onto the line, we have shown that the residuals are normally distributed.</span></label><label><input type="radio" autocomplete="off" name="radio_TJNDSPRMGQ" value=""></input> <span>Yes, since the histogram looks bell shaped and centred at zero and the points fit near-perfectly onto the line, we have shown that the residuals are normally distributed.</span></label><label><input type="radio" autocomplete="off" name="radio_TJNDSPRMGQ" value="answer"></input> <span>Yes, while neither the histogram nor the QQ-plot are perfect, they both look adequate to show the residuals are approximately normally distributed. </span></label><label><input type="radio" autocomplete="off" name="radio_TJNDSPRMGQ" value=""></input> <span>No, since the histogram looks more bi-modal than bell shaped and many of the QQ-plot points are very far from the line.</span></label>
 </div>
 <p><br></p>
 

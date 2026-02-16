@@ -59,7 +59,7 @@ Looking at our summary, we have an $R^2 = 0.3729$. This means that only $37.3\%$
 
 ### **Exercise 2**
 
-Create a plot to display the relationship between `runs` and `homeruns`, i.e. with `runs` as your outcome/response variable and `at_bats` as your explanatory/predictor variable. Add a title and axes labels using the same method as before. 
+Create a plot to display the relationship between `runs` and `homeruns`, i.e. with `runs` as your outcome/response variable and `homeruns` as your explanatory/predictor variable. Add a title and axes labels using the same method as before. 
 
 `r hide("Hint")`
 
